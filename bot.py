@@ -3,14 +3,14 @@ from discord.ext import commands
 import requests
 import asyncio
 
+API_KEY = ""
+
 intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 cached_response = None
-
-API_KEY = ""
 
 @bot.command()
 async def stats(ctx):
